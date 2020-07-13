@@ -16,12 +16,14 @@
         border-radius: 25px;
     }
 
-    .my-actions {
-        column-width: 175px;
-    }
+    @media (hover: hover) {
+        .my-actions {
+            column-width: 175px;
+        }
 
-    .my-actions a {
-        display: none;
+        .my-actions a {
+            display: none;
+        }
     }
 
     tr:hover .my-actions a {
@@ -86,7 +88,7 @@
                 </table>
             </div>
 
-            <!-- Add new contact Modal -->
+            {# Add new contact Modal #}
             <div id="my-add-modal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
