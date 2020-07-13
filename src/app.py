@@ -41,7 +41,7 @@ def index():
 
         return "00000{}".format(str(c))[-6:]
 
-    all_data = Data.query.order_by(Data.id).all()
+    all_data = Data.query.order_by(Data.name).all()
     
     for row in all_data:
         row.icon_color = str_to_color(row.name)
