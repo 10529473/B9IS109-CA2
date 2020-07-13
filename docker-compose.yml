@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: crud
+      POSTGRES_PASSWORD: "!QWEqwe123"
+    volumes:
+      - ./db/data:/var/lib/postegres
+    container_name: postegres-container
+    ports:
+      - "5432:5432"
