@@ -1,1 +1,1 @@
-gunicorn hello:app
+web: gunicorn --chdir src my_module:app
