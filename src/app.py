@@ -15,7 +15,7 @@ app.secret_key = "Secret Key"
 
 # PostegreSQL connection for Heroku
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or \
-    'sqlite:///' + os.path.join(app.instance_path, 'db.sqlite')
+    'sqlite:///db.sqlite'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # # SQLite3 local connection
