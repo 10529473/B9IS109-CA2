@@ -5,18 +5,18 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 app.secret_key = "Secret Key"
 
-# # PostegreSQL connection for Docker
-# db_url = 'localhost:5432'
-# db_name = 'crud'
-# db_user = 'postgres'
-# db_password = '!QWEqwe123'
-# app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{db_user}:{db_password}@{db_url}/{db_name}'
-# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-# PostegreSQL connection for Heroku
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or \
-    'sqlite:///db.sqlite'
+# PostegreSQL connection for Docker
+db_url = 'localhost:5432'
+db_name = 'crud'
+db_user = 'postgres'
+db_password = '!QWEqwe123'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{db_user}:{db_password}@{db_url}/{db_name}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# # PostegreSQL connection for Heroku
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or \
+#     'sqlite:///db.sqlite'
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # # SQLite3 local connection
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
